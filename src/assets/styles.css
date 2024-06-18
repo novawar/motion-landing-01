@@ -1,0 +1,87 @@
+.animation-body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 90vh;
+}
+
+.animation-section {
+  box-sizing: border-box;
+  width: 100%;
+  height: 101vh;
+  display: flex;
+  flex-direction: row; /* เริ่มต้นด้วยการแสดงแนวนอน */
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 50px;
+  background: linear-gradient(334deg, #ffff,#10b981 , #6366f1);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+}
+.animation-section:nth-child(2) {
+    background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
+    background-size: 180% 180%;
+    animation: gradient-animation 6s ease infinite;
+}
+
+
+
+.animation-section:nth-child(3) {
+  background: linear-gradient(334deg, #6b97f7, #eab308, #f7137e);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+}
+
+.animation-section:nth-child(4) {
+  background: linear-gradient(334deg, #ffff, #98e2ff, #e6e0e2);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+}
+
+.animation-section span {
+  display: block;
+  transform: translateX(-100px);
+  opacity:
+   0;
+}
+
+
+
+
+.font-head {
+font-weight: 700;
+font-family: "Inter-Bold", "Inter", sans-serif;
+/* color: rgba(0, 0, 0, 0.9); */
+color:white;
+font-size: 64px;
+letter-spacing: -4px;
+}
+
+@media (max-width: 768px) {
+.animation-section {
+    flex-direction: column; /* เปลี่ยนเป็นแสดงแนวคอลัมน์ */
+}
+}
+
+
+
+.gradient {
+width: 100vw;
+height: 100vh;
+background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
+background-size: 180% 180%;
+animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
